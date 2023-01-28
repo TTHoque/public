@@ -1,2 +1,2 @@
 # public
-puiblic repo for CSE 3150 submissions
+public repo for CSE 3150 submissions
