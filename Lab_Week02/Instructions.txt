@@ -1,0 +1,40 @@
+Lab Exercise
+
+In this lab we are building randomly generated well balanced lists of symbols. For example, parentheses
+are useful examples of well-balanced lists of matching symbols.
+Here are four examples,
+()
+()()
+(((())))
+( () ((())) )
+of well-balanced list of parentheses.
+
+Given an integer 𝑛, our plan to generate random lists of 2𝑛 matching symbols, such as parentheses, has
+the next steps:
+1. Given a list of 2𝑛 integers, fill the first 𝑛 elements with 1 and the next 𝑛 elements with -1.
+2. Use the Fisher-Yates algorithm to randomly scramble this list
+3. Toss out any scrambled lists that do not have non-negative or non-positive prefix sums
+4. Repeat these steps until we have a sufficient number of randomly generated well-balanced lists
+Now we need to compute the proportion of randomly permuted arrays of 1s and -1s that are validated
+to be well-balanced lists. This may be best done by running many instances of the above four steps and
+counting which ones represent well-balanced lists and which ones do not.
+You must run your algorithm at least several thousand times or until the proportion of well-balanced
+lists seems to converge.
+
+What you may use
+We can use the prefix sums algorithms from our Week2 exercise.
+
+You must write your own Fisher-Yates algorithm using the std::rand function.
+
+What to hand in
+A single page document containing:
+1. Your name and the Lab name (Lab Week 2: balanced lists)
+2. A github repo link
+3. The github repo must be cloneable by me and Ronak Sahu ( ronak.sahu@uconn.edu )
+4. The cloned code must run its unit tests after a compile
+5. Any compiling instructions must be in your README file
+
+You must include declaration files (H-files) and CPP files as well as a unit testing.
+This one page document must show what the apparent ratio of well-balanced lists to the total number
+of lists generated. Include he total numbers of runs of this algorithm.
+This assumes the proportion of well-balanced lists seems to converge.
