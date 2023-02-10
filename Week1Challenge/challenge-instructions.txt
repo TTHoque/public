@@ -1,23 +1,4 @@
-In this practice, you will write a simple program that takes an integer from standard input and outputs its square and the two-times of this integer. 
 
-The purpose of this practice is getting started on C++ header/source file structure, compiling and linking and standard I/O.
-
-Check the provided started code for function signatures.
-
-1. The first part is implementing two functions as specified in ECNumbers.h. Note (1): you need to declare the functions properly according to the description. 
-Note (2): you need to properly write up the header file!
-
-2. Once you complete the code in ECNumbers.h, create a namespace called ECNumbers and place the two functions you just implemented inside this namespace.
-
-3. Now implement the (simple) function in ECCalculator.cpp
-
-4. Now test the functions you just coded in TestNumbers.cpp. Here you would practice how to invoke functions when there is namespace
-
-5. Now experiment to work with files in separate folders. Copy the header files you just created into the inc folder under SeparateFolder, and the source 
-files under src folder. Now try to compile the code.
-
-
-*********************************************************
 Programming practice: implement function
 void ECRemoveSpace(int nums[], int let, int val) 
 (from Leetcode)
