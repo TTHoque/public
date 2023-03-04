@@ -17,15 +17,18 @@ struct int_vector {
 struct vector_pair {
     int_vector v1;
     int_vector v2;
-    vector_pair(const vector_pair & vp) : v1(vp.v1), v2(vp.v2) {};
-    vector_pair(): v1(int_vector()), v2(int_vector()) {};
+    double angle;
+    vector_pair(const vector_pair & vp) : v1(vp.v1), v2(vp.v2), angle(vp.angle){};
+    vector_pair(): v1(int_vector()), v2(int_vector()), angle(0.0){};
     double dot_product();
-    double cosign_angle();
+    double angle_calc();
 };
 
 vector<int_vector> vectors_from_file(string filename);
-void sort_vector_of_vp_by_cosine_closeness(const vector<vector_pair> & vect);
+vector<vector_pair> sort_vector_pairs_by_cosine_closeness(const vector<int_vector> & vect);
 void print_vectors_from_vector(const vector<int_vector> & vect);
-
+void print_int_vector(const int_vector & iv);
+void print_vector_pair(const vector_pair & vp);
+void print_vector_pairs_from_vector(const vector<vector_pair> & vect);
 
 #endif
