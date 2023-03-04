@@ -16,8 +16,8 @@ vector<int_vector> vectors_from_file(string filename)
         int_vector v;
         if (!(input >> x >> y)) throw exception();
         do {
-            v.x= atoi(x.c_str());
-            v.y = atoi(y.c_str());
+            v.x= atof(x.c_str());
+            v.y = atof(y.c_str());
             v.magnitude = v.magnitude_calc();
 
             vect.push_back(v);
@@ -31,17 +31,20 @@ vector<int_vector> vectors_from_file(string filename)
     return vect;
 }
 
-int int_vector::magnitude_calc()
+double int_vector::magnitude_calc()
 {  
     return sqrt(pow(x, 2) + pow(y, 2));
 }
 
-int vector_pair::dot_product()
+double vector_pair::dot_product()
 {
-
+    if (v1.magnitude == -1) v1.magnitude = v1.magnitude_calc();
+    if (v2.magnitude == -1) v2.magnitude = v2.magnitude_calc();
+    
+    
 }
 
-int vector_pair::cosign_angle()
+double vector_pair::cosign_angle()
 {
 
 }
@@ -51,12 +54,12 @@ void sort_vector_of_vp_bv2_cosine_closeness(const vector<vector_pair> & vect)
     
 }
 
-void print_vector_pairs(const vector<vector_pair> & vect)
+void print_vectors_from_vector(const vector<int_vector> & vect)
 {
-    for (auto vp: vect) {
-        cout << "magnitude: " << vp.magnitude() 
-             << " v1.to: " << vp.v1.to 
-             << " v2.to: " << vp.v2.to 
+    for (auto v: vect) {
+        cout << "v.x: " << v.x 
+             << ",   v.y: " << v.y  
+             << ",   v.magnitude: " << v.magnitude 
              << endl;
     }
 }

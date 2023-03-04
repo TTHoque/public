@@ -8,11 +8,15 @@ TEST_CASE("Testing vector_calc")
     {
         cout << "vect_pair (default)------------" << endl;
         vector_pair vp1;
-        cout << "x from: " << vp1.x.from << ", x to: " << vp1.x.to << endl;
-        cout << "y from: " << vp1.y.from << ", y to: " << vp1.y.to << endl;
+        cout << "v1 x : " << vp1.v1.x << ", v1 y: " << vp1.v1.y << ", v1 magnitude: " << vp1.v1.magnitude << endl;
+        cout << "v2 x: " << vp1.v2.x << ", v2 y: " << vp1.v2.y << ", v2 magnitude: " << vp1.v2.magnitude << endl;
         
-        cout << "vect_pairs from text------------" << endl;
-        vector<vector_pair> vect1 = vector_pairs_from_file("vector_pairs.txt");
-        print_vector_pairs(vect1);
+        cout << "vectors from text--------------" << endl;
+        vector<int_vector> vect1 = vectors_from_file("vector_pairs.txt");
+        print_vectors_from_vector(vect1);
+
+        cout << "vect_pair ---------------------" << endl;
+        vector_pair vp2;
+        
     }
 }
