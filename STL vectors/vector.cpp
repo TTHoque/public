@@ -19,7 +19,7 @@ vector<int_vector> get_int_vectors_from_file(string filename)
         string from, to;
         int_vector iv;
         int id{0};
-        if (!(input >> from >> to)) throw exception();
+        if (!(input >> from >> to)) return vect;
         do {
             iv.id = id++;
             iv.from = atoi(from.c_str());
